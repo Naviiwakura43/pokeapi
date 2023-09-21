@@ -1,19 +1,22 @@
-// src/App.js
-
 import React from 'react';
 import './App.css';
-import PokemonInfo from './Pokemoninfo.js';
+import PokemonInfo from './Pokemoninfo'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>PokeAPI en React</h1>
-        <PokemonInfo />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <h1>My Pokemon App</h1>
+        <Routes>
+          <Route path="/" element={<PokemonInfo />} />
+          {}
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
 
 export default App;
 
